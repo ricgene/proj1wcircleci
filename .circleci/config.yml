@@ -37,7 +37,7 @@ jobs: # A basic unit of work in a run
             pipenv run python python1.py
             pipenv run nosetests -v test_python1.py > test.log 2>&1
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-          path: .
+          path: ./test.log
       - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-          path: .
+          path: ./test.log
           destination: tr1
